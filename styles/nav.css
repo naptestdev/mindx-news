@@ -1,0 +1,94 @@
+.nav-1 {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-1 img {
+  height: 25px;
+  width: auto;
+}
+
+.nav-1-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-1-links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-1-links i {
+  font-size: 20px;
+}
+
+.nav-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-2 .drop {
+  position: relative;
+  flex: 1;
+}
+
+.nav-2 .drop:hover > a {
+  color: #ff0000;
+}
+
+.nav-2 .list {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  top: 100%;
+  left: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-top: 2px solid #ff0000;
+  box-shadow: 3px 3px 6px #808080;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.nav-2 .drop:hover .list {
+  opacity: 100;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.nav-2 .list-child {
+  white-space: nowrap;
+  background: #fff;
+  padding: 10px 50px 10px 10px;
+}
+
+.nav-2 .list-child:hover {
+  background: #f8f8f8;
+}
+
+.nav-2 .drop {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-1-links span {
+    display: none;
+  }
+  .nav-2 {
+    display: none;
+  }
+}
